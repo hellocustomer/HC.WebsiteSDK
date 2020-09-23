@@ -6,6 +6,8 @@
     "bitjson",
     "bitauth",
     "cimg",
+    "firstname",
+    "lastname",
     "circleci",
     "codecov",
     "commitlint",
