@@ -34,7 +34,7 @@ const urlBuilder = new UrlBuilder({
 </script>
   ```
 Read the docs for other configuration options
-## Inline survey
+### Inline survey
   #### Example (es module)
   ```js
   import { UrlBuilder, InlineSurvey } from '@hello-customer/website-touchpoint'
@@ -57,7 +57,7 @@ Read the docs for other configuration options
 ```html
 <script src="https://......./website-touchpoint.js"></script>
 <script>
-    const urlBuilder = new hcWebsiteSdk.UrlBuilder({
+    const urlBuilder = new hcWebsiteTouchpoint.UrlBuilder({
       baseUrl: 'https://base.com',
       tenantId: 'xxx',
       touchPointId: 'zzzzz',
@@ -66,9 +66,64 @@ Read the docs for other configuration options
         isPreview: true
       }
      });
-     const inlineSurvey = new hcWebsiteSdk.InlineSurvey(urlBuilder, {
+     const inlineSurvey = new hcWebsiteTouchpoint.InlineSurvey(urlBuilder, {
         elementSelector: '#survey'
       });
 </script>
   ```
 Read the docs for other configuration options
+
+### Modal survey
+  #### Modal structure
+ 
+  The structure of the modal can be described as follows:
+  ```html
+  <div class="hello-customer-modal">
+    <div class="hello-customer-modal__window">
+       <div class="hello-customer-modal__bar">
+           <div class="hello-customer-modal__close-button">
+               ICON
+           </div>
+       </div>
+       <iframe class="hello-customer-survey__survey"></iframe>
+    </div>
+  </div>
+  ```
+  Provided class names are the once defined by the library itself by default,
+  and can be overwritten using ```classNames``` property of the configuration object.
+ 
+  In order to modify styles attached to the modal elements using aforementioned class names,
+  You can use ```modalStyle``` property of the configuration object,
+  
+  If You want to style the modal by Yourself, You can remove all predefined style rules by setting ```ignoreDefaultStyles``` to true.
+  #### Example (es module)
+  ```js
+  import { UrlBuilder, InlineSurvey } from '@hello-customer/website-touchpoint'
+  const urlBuilder = new UrlBuilder({
+    baseUrl: 'https://base.com',
+    language: 'EN',
+    tenantId: 'xxxx',
+    touchPointId: 'zzz',
+    extra: {
+      isPreview: true
+    }
+  });
+  const modalSurvey = new ModalSurvey(urlBuilder, {});
+  ```
+  #### Example (script tag)
+  ```html
+  <script src="https://......./website-touchpoint.js"></script>
+  <script>
+  const urlBuilder = new hcWebsiteTouchpoint.UrlBuilder({
+      baseUrl: 'https://base.com',
+      tenantId: 'xxxx',
+      touchPointId: 'zzz',
+      language: 'EN',
+      extra: {
+        isPreview: true
+      }
+     });
+  const modalSurvey = new hcWebsiteTouchpoint.ModalSurvey(urlBuilder, {});
+  </script>
+  ```
+Read the docs for other configuration options.

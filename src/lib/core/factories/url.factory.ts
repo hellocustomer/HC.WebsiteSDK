@@ -6,6 +6,8 @@ import { prefixObjectKeys } from '../utils/prefix-object-keys.util';
 
 /**
  * Class is responsible for parsing provided common configuration into url string
+ *
+ * @category Factories
  */
 export class UrlFactory {
   constructor(private config: SurveyConfig) {}

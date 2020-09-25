@@ -25,7 +25,7 @@ import { UrlConfigValidator } from './url.config-validator';
  * ```html
  * <script src="https://......./website-touchpoint.js"></script>
  * <script>
- * const urlBuilder = new hcWebsiteSdk.UrlBuilder({
+ * const urlBuilder = new hcWebsiteTouchpoint.UrlBuilder({
  *     baseUrl: 'https://base.com',
  *     tenantId: 'xxxx',
  *     touchPointId: 'zzz',
@@ -36,6 +36,8 @@ import { UrlConfigValidator } from './url.config-validator';
  *    });
  * </script>
  * ```
+ *
+ * @category Root
  */
 export class UrlBuilder {
   private readonly urlFactory: UrlFactory;

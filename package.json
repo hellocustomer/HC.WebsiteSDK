@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Library for embedding Hello Customer surveys",
   "main": "build/umd/website-touchpoint.js",
+  "typings": "build/module/index.d.ts",
   "module": "build/module/index.js",
   "repository": "https://github.com/hellocustomer/HC.WebsiteSDK.git",
   "license": "MIT",

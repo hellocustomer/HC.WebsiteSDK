@@ -1,4 +1,5 @@
 import { InvalidQuerySelectorException } from '../../core/exceptions/invalid-query-selector.exception';
+import { StyledElementFactory } from '../../core/factories/styled-element.factory';
 import { UrlFactory } from '../../core/factories/url.factory';
 import { UrlBuilder } from '../../url-builder/url.builder';
 
@@ -29,7 +30,7 @@ import { InlineSurveyConfigValidator } from './inline-survey.config-validator';
  * ```html
  * <script src="https://......./website-touchpoint.js"></script>
  * <script>
- * const urlBuilder = new hcWebsiteSdk.UrlBuilder({
+ * const urlBuilder = new hcWebsiteTouchpoint.UrlBuilder({
  *     baseUrl: 'https://base.com',
  *     tenantId: 'xxxx',
  *     touchPointId: 'zzz',
@@ -43,6 +44,8 @@ import { InlineSurveyConfigValidator } from './inline-survey.config-validator';
  *     });
  * </script>
  * ```
+ *
+ * @category Surveys
  */
 export class InlineSurvey {
   private readonly iFrameHandle: HTMLIFrameElement;
@@ -109,21 +112,23 @@ export class InlineSurvey {
       throw new InvalidQuerySelectorException(
         `[Hello Customer SDK] HTML element for ${this.inlineConfig.elementSelector} selector not found!`
       );
-    const iFrame = document.createElement('iframe');
-    if (this.inlineConfig.fillContainer) {
-      iFrame.style.height = '100%';
-      iFrame.style.width = '100%';
-    }
+    const iFrameFactory = new StyledElementFactory(
+      document.createElement('iframe')
+    )
+      .applyInlineConditionally(!!this.inlineConfig.fillContainer, {
+        height: '100%',
+        width: '100%',
+      })
+      .applyInlineConditionally(
+        !!this.inlineConfig.iFrameInlineStylesRules,
+        this.inlineConfig.iFrameInlineStylesRules
+      );
+
     if (this.inlineConfig.iFrameCssClasses)
       this.inlineConfig.iFrameCssClasses.forEach((cl) =>
-        iFrame.classList.add(cl)
+        iFrameFactory.applyClass(cl)
       );
-    if (this.inlineConfig.iFrameInlineStylesRules)
-      Object.entries(this.inlineConfig.iFrameInlineStylesRules).forEach(
-        ([key, value]) => {
-          (iFrame.style as Record<string, any>)[key] = value;
-        }
-      );
+    const iFrame = iFrameFactory.styledElement;
     root.appendChild(iFrame);
     return iFrame;
   }

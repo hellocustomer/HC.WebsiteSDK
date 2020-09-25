@@ -5,6 +5,8 @@ import { InlineSurveyConfig } from './inline-survey-config.interface';
 
 /**
  * Class validating provided InlineSurveyConfig
+ *
+ * @category Validators
  */
 export class InlineSurveyConfigValidator extends BaseConfigValidator<
   InlineSurveyConfig

@@ -5,6 +5,7 @@ import { ConfigValidationFunctionType } from '../types/config-validation-functio
  * Base class for all config validators,
  * contains common logic and defines interface for them
  * @typeParam T  validated configuration object type
+ * @category Validators
  */
 export abstract class BaseConfigValidator<T> {
   private validationFunctions: ConfigValidationFunctionType<T>[];

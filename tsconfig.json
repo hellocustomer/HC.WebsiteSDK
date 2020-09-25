@@ -40,10 +40,7 @@
     "lib": ["es2017", "dom"],
     "types": ["jest"],
     "typeRoots": ["node_modules/@types", "src/types"],
-    "baseUrl": ".",
-    "paths": {
-      "@hello-customer": ["src/index.ts"]
-    }
+    "baseUrl": "."
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules/**", "**/*.spec.ts"],

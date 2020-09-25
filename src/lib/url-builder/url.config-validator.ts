@@ -4,6 +4,8 @@ import { ConfigValidationFunctionType } from '../core/types/config-validation-fu
 
 /**
  * Class validating common survey config
+ *
+ * @category Validators
  */
 export class UrlConfigValidator extends BaseConfigValidator<SurveyConfig> {
   public constructor() {
