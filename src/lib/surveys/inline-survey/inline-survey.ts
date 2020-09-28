@@ -11,7 +11,7 @@ import { InlineSurveyConfigValidator } from './inline-survey.config-validator';
  *
  * ### Example (es module)
  * ```js
- * import { UrlBuilder, InlineSurvey } from 'hc.website-sdk'
+ * import { UrlBuilder, InlineSurvey } from '@hello-customer/website-touchpoint'
  * const urlBuilder = new UrlBuilder({
  *   baseUrl: 'https://base.com',
  *   language: 'EN',
@@ -27,7 +27,7 @@ import { InlineSurveyConfigValidator } from './inline-survey.config-validator';
  * ```
  * ### Example (script tag)
  * ```html
- * <script src="https://......./hc.website-sdk.js"></script>
+ * <script src="https://......./website-touchpoint.js"></script>
  * <script>
  * const urlBuilder = new hcWebsiteSdk.UrlBuilder({
  *     baseUrl: 'https://base.com',

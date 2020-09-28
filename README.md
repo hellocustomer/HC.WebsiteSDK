@@ -5,7 +5,7 @@ First You have to create UrlBuilder class which stores your survey configuration
 ### Survey Configuration
 #### Example (es module)
 ```js
-import { UrlBuilder } from 'hc.website-sdk'
+import { UrlBuilder } from '@hello-customer/website-touchpoint'
 const urlBuilder = new UrlBuilder({
   baseUrl: 'https://base.com',
   tenantId: 'xxx',
@@ -20,9 +20,9 @@ const urlBuilder = new UrlBuilder({
 
 #### Example (script tag)
 ```html
-<script src="https://......./hc.website-sdk.js"></script>
+<script src="https://......./website-touchpoint.js"></script>
 <script>
-    const urlBuilder = new hcWebsiteSdk.UrlBuilder({
+    const urlBuilder = new hcWebsiteTouchpoint.UrlBuilder({
       baseUrl: 'https://base.com',
       tenantId: 'xxx',
       touchPointId: 'zzzzz',
@@ -37,7 +37,7 @@ Read the docs for other configuration options
 ## Inline survey
   #### Example (es module)
   ```js
-  import { UrlBuilder, InlineSurvey } from 'hc.website-sdk'
+  import { UrlBuilder, InlineSurvey } from '@hello-customer/website-touchpoint'
   const urlBuilder = new UrlBuilder({
     baseUrl: 'https://base.com',
     tenantId: 'xxx',
@@ -55,7 +55,7 @@ Read the docs for other configuration options
  
 #### Example (script tag)
 ```html
-<script src="https://......./hc.website-sdk.js"></script>
+<script src="https://......./website-touchpoint.js"></script>
 <script>
     const urlBuilder = new hcWebsiteSdk.UrlBuilder({
       baseUrl: 'https://base.com',

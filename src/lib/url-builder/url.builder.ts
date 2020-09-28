@@ -9,7 +9,7 @@ import { UrlConfigValidator } from './url.config-validator';
  *
  * ### Example (es module)
  * ```js
- * import { UrlBuilder } from 'hc.website-sdk'
+ * import { UrlBuilder } from '@hello-customer/website-touchpoint'
  * const urlBuilder = new UrlBuilder({
  *   baseUrl: 'https://base.com',
  *   tenantId: 'xxxx',
@@ -23,7 +23,7 @@ import { UrlConfigValidator } from './url.config-validator';
  *
  * ### Example (script tag)
  * ```html
- * <script src="https://......./hc.website-sdk.js"></script>
+ * <script src="https://......./website-touchpoint.js"></script>
  * <script>
  * const urlBuilder = new hcWebsiteSdk.UrlBuilder({
  *     baseUrl: 'https://base.com',
