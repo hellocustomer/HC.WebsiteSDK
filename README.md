@@ -127,3 +127,42 @@ Read the docs for other configuration options
   </script>
   ```
 Read the docs for other configuration options.
+
+### Window survey
+  #### Example (es module)
+  ```js
+  import { UrlBuilder, WindowSurvey } from '@hello-customer/website-touchpoint'
+  const urlBuilder = new UrlBuilder({
+    baseUrl: 'https://base.com',
+    tenantId: 'xxx',
+    touchPointId: 'zzzzz',
+    language: 'EN',
+    extra: {
+      isPreview: true
+    }
+  });
+  const inlineSurvey = new WindowSurvey(urlBuilder, {
+    openNewWindow: true
+  });
+  ```
+ 
+ 
+#### Example (script tag)
+```html
+<script src="https://......./website-touchpoint.js"></script>
+<script>
+    const urlBuilder = new hcWebsiteTouchpoint.UrlBuilder({
+      baseUrl: 'https://base.com',
+      tenantId: 'xxx',
+      touchPointId: 'zzzzz',
+      language: 'EN',
+      extra: {
+        isPreview: true
+      }
+     });
+     const inlineSurvey = new hcWebsiteTouchpoint.WindowSurvey(urlBuilder, {
+        openNewWindow: true
+      });
+</script>
+  ```
+Read the docs for other configuration options
