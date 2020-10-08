@@ -32,6 +32,7 @@ export class StyledElementFactory<T extends HTMLElement> {
     ruleName: keyof CSSStyleDeclaration,
     ruleValue: CSSStyleDeclaration[keyof CSSStyleDeclaration]
   ): StyledElementFactory<T> {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (this.elementClone.style as Record<string, any>)[
       camelToKebabCase(ruleName)
     ] = ruleValue;

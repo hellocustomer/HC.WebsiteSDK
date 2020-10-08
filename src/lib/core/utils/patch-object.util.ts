@@ -6,7 +6,7 @@ export function patchObject<T>(source: T, patch: Partial<T>): T {
     const [key, value] = current;
     let partialResult;
     if (typeof value === 'object' && value != null)
-      partialResult = patchObject((source as any)[key], value);
+      partialResult = patchObject(source[key as keyof T], value);
     else partialResult = value;
 
     return {

@@ -3,6 +3,7 @@
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/master/cspell.schema.json",
   "language": "en",
   "words": [
+    "behaviour",
     "bitjson",
     "bitauth",
     "cimg",
@@ -22,6 +23,7 @@
     "prettierignore",
     "sandboxed",
     "transpiled",
+    "touchpoint",
     "typedoc",
     "untracked"
   ],
