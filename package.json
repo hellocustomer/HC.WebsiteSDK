@@ -1,5 +1,5 @@
 {
-  "name": "website-touchpoint",
+  "name": "@hello-customer/website-touchpoint",
   "version": "1.0.0",
   "description": "Library for embedding Hello Customer surveys",
   "main": "build/umd/website-touchpoint.js",
@@ -30,9 +30,13 @@
     "doc": "run-s doc:html && open-cli build/docs/index.html",
     "doc:html": "typedoc src/ --exclude **/*.spec.ts --target ES5 --mode file --out build/docs",
     "doc:json": "typedoc src/ --exclude **/*.spec.ts --target ES5 --mode file --json build/docs/typedoc.json",
-    "version": "standard-version",
+    "version": "standard-version --tag-prefix=''",
     "reset-hard": "git clean -dfx && git reset --hard && npm i",
-    "prepare-release": "run-s reset-hard test cov:check doc:html version"
+    "checkout-master": "git checkout master && git pull --tags origin master",
+    "release:prepare": "run-s reset-hard checkout-master test doc:html version",
+    "release:push": "git push --follow-tags origin master --no-verify",
+    "release:publish": "npm publish --access public --tag latest",
+    "release": "run-s release:*"
   },
   "engines": {
     "node": ">=10"
