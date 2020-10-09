@@ -9,7 +9,7 @@ import { ModalSurveyStyleConfig } from './modal-survey-style-config.interface';
 export const logoStyle:
   | Partial<CSSStyleDeclaration>
   | Record<string, string> = {
-  height: '31px',
+  height: '26px',
   userSelect: 'none',
   userDrag: 'none',
   '-moz-user-select': 'none',
