@@ -1,5 +1,12 @@
 # HC.WebsiteSDK
 ## Install
+The recommended approach to install this package is to do it via npm with
+```npm install @hello-customer/website-touchpoint```
+
+If You are not using npm or yarn, You have to include the script tag in your HTML code
+```html
+<script src="https://unpkg.com/@hello-customer/website-touchpoint"></script>
+```
 ## Surveys
 First You have to create UrlBuilder class which stores your survey configuration and later an appropriate survey instance can be created.
 ### Survey Configuration
@@ -20,7 +27,7 @@ const urlBuilder = new UrlBuilder({
 
 #### Example (script tag)
 ```html
-<script src="https://......./website-touchpoint.js"></script>
+<script src="https://unpkg.com/@hello-customer/website-touchpoint"></script>
 <script>
     const urlBuilder = new hcWebsiteTouchpoint.UrlBuilder({
       baseUrl: 'https://base.com',
@@ -55,7 +62,7 @@ Read the docs for other configuration options
  
 #### Example (script tag)
 ```html
-<script src="https://......./website-touchpoint.js"></script>
+<script src="https://unpkg.com/@hello-customer/website-touchpoint"></script>
 <script>
     const urlBuilder = new hcWebsiteTouchpoint.UrlBuilder({
       baseUrl: 'https://base.com',
@@ -112,7 +119,7 @@ Read the docs for other configuration options
   ```
   #### Example (script tag)
   ```html
-  <script src="https://......./website-touchpoint.js"></script>
+  <script src="https://unpkg.com/@hello-customer/website-touchpoint"></script>
   <script>
   const urlBuilder = new hcWebsiteTouchpoint.UrlBuilder({
       baseUrl: 'https://base.com',
@@ -149,7 +156,7 @@ Read the docs for other configuration options.
  
 #### Example (script tag)
 ```html
-<script src="https://......./website-touchpoint.js"></script>
+<script src="https://unpkg.com/@hello-customer/website-touchpoint"></script>
 <script>
     const urlBuilder = new hcWebsiteTouchpoint.UrlBuilder({
       baseUrl: 'https://base.com',

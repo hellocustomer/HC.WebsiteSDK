@@ -29,7 +29,7 @@ import { WindowSurveyConfigValidator } from './window-survey.config-validator';
  * ```
  * ### Example (script tag)
  * ```html
- * <script src="https://......./website-touchpoint.js"></script>
+ * <script src="https://unpkg.com/@hello-customer/website-touchpoint"></script>
  * <script>
  * const urlBuilder = new hcWebsiteTouchpoint.UrlBuilder({
  *     baseUrl: 'https://base.com',

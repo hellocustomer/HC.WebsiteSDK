@@ -53,7 +53,7 @@ import { closeIconSvgElementFactory } from './modal-survey.svg-factory';
  * ```
  * ### Example (script tag)
  * ```html
- * <script src="https://......./website-touchpoint.js"></script>
+ * <script src="https://unpkg.com/@hello-customer/website-touchpoint"></script>
  * <script>
  * const urlBuilder = new hcWebsiteTouchpoint.UrlBuilder({
  *     baseUrl: 'https://base.com',
