@@ -30,7 +30,7 @@ export const footerStyle: Partial<CSSStyleDeclaration> = {
   flexShrink: '0',
   flexBasis: '44px',
   alignItems: 'center',
-  background: '#EFEFEF 0% 0% no-repeat padding-box',
+  background: '#EFEFEF',
 };
 
 /**
@@ -43,6 +43,7 @@ export const rootDivStyle: Partial<CSSStyleDeclaration> = {
   top: '0',
   left: '0',
   width: '100%',
+  boxSizing: 'border-box',
   height: '100%',
   display: 'flex',
   justifyContent: 'center',
@@ -62,7 +63,7 @@ export const windowDivStyle: Partial<CSSStyleDeclaration> = {
   width: '100%',
   maxHeight: '590px',
   height: '100%',
-  background: '#FFFFFF 0% 0% no-repeat padding-box',
+  background: '#FFFFFF',
   borderRadius: '1px 1px 1px 1px',
   display: 'flex',
   overflow: 'hidden',
@@ -88,7 +89,8 @@ export const windowCloseButtonStyle: Partial<CSSStyleDeclaration> = {
  */
 export const windowBarDivStyle: Partial<CSSStyleDeclaration> = {
   flexBasis: '25px',
-  background: '#003161 0% 0% no-repeat padding-box',
+  background: '#003161',
+  flexShrink: '0',
   display: 'flex',
   justifyContent: 'flex-end',
   padding: '7.5px',
@@ -102,7 +104,8 @@ export const windowBarDivStyle: Partial<CSSStyleDeclaration> = {
 export const iFrameStyle: Partial<CSSStyleDeclaration> = {
   width: '100%',
   border: '0',
-  flexBasis: '100%',
+  flexShrink: '1',
+  flexGrow: '10',
 };
 
 /**
@@ -111,7 +114,7 @@ export const iFrameStyle: Partial<CSSStyleDeclaration> = {
  * @category Modal style
  */
 export const modalTranslucentBackground: Partial<CSSStyleDeclaration> = {
-  background: '#000000B3 0% 0% no-repeat padding-box',
+  background: '#000000B3',
 };
 
 /**
