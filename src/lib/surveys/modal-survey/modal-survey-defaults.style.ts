@@ -59,7 +59,7 @@ export const rootDivStyle: Partial<CSSStyleDeclaration> = {
  * @category Modal style
  */
 export const windowDivStyle: Partial<CSSStyleDeclaration> = {
-  maxWidth: '600px',
+  maxWidth: '685px',
   width: '100%',
   maxHeight: '590px',
   height: '100%',
@@ -150,7 +150,7 @@ export const classNames: Required<ClassNamesConfigType> = {
  * @category Modal style
  */
 export const medias: Record<string, Partial<ModalSurveyStyleConfig>> = {
-  '(max-width: 600px)': {
+  '(max-width: 685px)': {
     windowDivStyle: {
       maxHeight: '100%',
     },
